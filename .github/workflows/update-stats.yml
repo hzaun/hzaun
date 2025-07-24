@@ -1,9 +1,12 @@
 name: Update GitHub Stats Image
 
 on:
-  workflow_dispatch:    # Allows manual run
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs every 24 hours at midnight UTC
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write   # 👈 necessary for pushing changes
 
 jobs:
   update-stats:
@@ -30,4 +33,3 @@ jobs:
           git add assets/top-langs.svg
           git commit -m "🔄 Update stats image" || echo "No changes"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
-
