@@ -1,22 +1,26 @@
 name: Update GitHub Stats Image
 
 on:
+  workflow_dispatch:    # Allows manual run
   schedule:
-    - cron: '0 */12 * * *'  # Every 12 hours
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Runs every 24 hours at midnight UTC
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate GitHub Stats with private count
-        run: |
-          curl "https://github-readme-stats.vercel.app/api/top-langs/?username=hzaun&layout=compact&count_private=true&hide_border=true&show_icons=true" \
-            -H "Authorization: token ${{ secrets.GH_STATS_TOKEN }}" \
-            -o assets/top-langs.svg
+- name: Create assets directory
+  run: mkdir -p assets
+
+- name: Download GitHub Stats SVG
+  run: |
+    curl "https://github-readme-stats.vercel.app/api/top-langs/?username=hzaun&layout=compact&count_private=true&hide_border=true&show_icons=true" \
+    -H "Authorization: token ${{ secrets.GH_STATS_TOKEN }}" \
+    -o assets/top-langs.svg
+
 
       - name: Commit and push
         run: |
