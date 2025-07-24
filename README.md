@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 ![GitHub Stats](https://github-readme-stats-eosin-sigma.vercel.app/api?username=hzaun&show_icons=true&count_private=true&theme=radical)
 <br><br>
 
-![Top Languages](https://github-readme-stats-eosin-sigma.vercel.app/api/top-langs?username=hzaun&layout=compact&count_private=true&hide=css,html)
+![Top Languages](https://github-readme-stats-eosin-sigma.vercel.app/api/top-langs?username=hzaun&layout=compact&count_private=true&hide=css,html&theme=radical)
 
 
 <br><br>
