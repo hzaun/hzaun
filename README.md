@@ -22,7 +22,8 @@ Here are some ideas to get you started:
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hzaun&show_icons=true&theme=radical)
 <br><br>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hzaun&layout=compact)
+![Top Languages](./assets/top-langs.svg)
+
 <br><br>
 
 ## 🛠 Tools & Skills
